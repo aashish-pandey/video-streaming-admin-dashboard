@@ -13,7 +13,7 @@ export default function EditAdmins() {
 
         try{
             const res = await axios.post(
-              "http://" + process.env.REACT_APP_API_CALL_ADDRESS + "/editAdmin",
+              process.env.REACT_APP_API_CALL_ADDRESS + "/editAdmin",
                 formData
             )
             .then(res=>{return res.data})
@@ -33,7 +33,7 @@ export default function EditAdmins() {
 
         try{
             const res = await axios.post(
-              "http://" + process.env.REACT_APP_API_CALL_ADDRESS + "/changeAdminDepartment",
+              process.env.REACT_APP_API_CALL_ADDRESS + "/changeAdminDepartment",
                 formData
             )
             .then(res=>{return res.data})

@@ -16,7 +16,7 @@ export default function UserCard(props) {
 
     try{
       const res = await axios.post(
-        "http://" + process.env.REACT_APP_API_CALL_ADDRESS + "/deleteUser",
+        process.env.REACT_APP_API_CALL_ADDRESS + "/deleteUser",
           formData
       )
       .then(res=>{ 

@@ -10,7 +10,7 @@ export default function AllAdmins() {
 
     useEffect(()=>{
         async function getAllAdmins(){
-            const data = await fetch("http://" + process.env.REACT_APP_API_CALL_ADDRESS + "//getAllAdmins")
+            const data = await fetch(process.env.REACT_APP_API_CALL_ADDRESS + "//getAllAdmins")
             .then(res=>res.json())
               .then(dt=>{
                 setAdmins(dt['msg'])

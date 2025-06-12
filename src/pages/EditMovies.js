@@ -13,7 +13,7 @@ export default function EditMovies() {
 
         try{
             const res = await axios.post(
-              "http://" + process.env.REACT_APP_API_CALL_ADDRESS + "/registerAdmin",
+              process.env.REACT_APP_API_CALL_ADDRESS + "/registerAdmin",
                 formData
             )
             .then(res=>{return res.data})

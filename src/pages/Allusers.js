@@ -9,7 +9,7 @@ export default function Allusers() {
 
     useEffect(()=>{
         async function getAllUsers(){
-            const data = await fetch("http://" + process.env.REACT_APP_API_CALL_ADDRESS + "/getAllUsers")
+            const data = await fetch(process.env.REACT_APP_API_CALL_ADDRESS + "/getAllUsers")
             .then(res=>res.json())
               .then(dt=>{
                 setUsers(dt['msg'])

@@ -18,7 +18,7 @@ export default function AllMoviesCard(props) {
 
     try{
       const res = await axios.post(
-        "http://" + process.env.REACT_APP_API_CALL_ADDRESS + "//deleteMovie",
+        process.env.REACT_APP_API_CALL_ADDRESS + "//deleteMovie",
           formData
       )
       .then(res=>{ 

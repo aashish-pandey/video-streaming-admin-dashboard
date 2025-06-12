@@ -20,7 +20,7 @@ export default function AdminCard(props) {
 
     try{
       const res = await axios.post(
-        "http://" + process.env.REACT_APP_API_CALL_ADDRESS + "/deleteAdmin",
+        process.env.REACT_APP_API_CALL_ADDRESS + "/deleteAdmin",
           formData
       )
       .then(res=>{ 

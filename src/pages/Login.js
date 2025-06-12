@@ -22,7 +22,7 @@ export default function Login() {
         const formData = new FormData(frm);
         try {
             const res = await axios.post(
-              "http://" + process.env.REACT_APP_API_CALL_ADDRESS + "/loginAdmin",
+              process.env.REACT_APP_API_CALL_ADDRESS + "/loginAdmin",
               formData
             )
             .then(dt=>{return dt.data})

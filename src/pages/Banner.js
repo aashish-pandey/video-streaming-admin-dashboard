@@ -18,7 +18,7 @@ export default function Banner() {
         try {
           
             const res = await axios.post(
-              "http://" + process.env.REACT_APP_API_CALL_ADDRESS + "/bannerUpload",
+              process.env.REACT_APP_API_CALL_ADDRESS + "/bannerUpload",
               formData
             );
             console.log("no error")

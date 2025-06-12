@@ -25,7 +25,7 @@ export default function VideoUpload() {
         try {
           
             const res = await axios.post(
-              "http://" + process.env.REACT_APP_API_CALL_ADDRESS + "/uploadMovie",
+              process.env.REACT_APP_API_CALL_ADDRESS + "/uploadMovie",
               formData
             );
             console.log("no error")
